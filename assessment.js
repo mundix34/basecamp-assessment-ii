@@ -49,8 +49,10 @@ console.log(myArrayCopy);
 var myNumbers = [333, 1, 4, 5, 511, 34, 88, 77, 222];
 //DON'T TOUCH THE CODE ABOVE
 function evensOnly(arr){
-  console.log(arr.filter)
-
+  var evensArray=myNumbers.filter(function(num,i,arr){
+    return num%2==0;
+  })
+console.log(evensArray);
 }
 
 
@@ -74,7 +76,12 @@ var trueFriends=peopleIknow.filter(function(name,i,arr){
 // #10 Create a function called indexFinder that will loop over an array and return a new array of the indexes of the contents e.g. [243, 123, 4, 12] would return [0,1,2,3]. 
 // Create a new variable called 'indexes'.. and set it to contain the indexes of randomNumbers.
 let randomNumbers = [1, 3453, 34, 456, 32, 3, 2, 0];
-var indexFinder= function(num,i,arr){
-  console.log(num);
-  
-}
+var indexes=[];
+var indexFinder= function(arr){
+  randomNumbers.forEach(function(arr,i){
+  indexes.push(i);
+})
+return indexes;
+};
+console.log(indexes);
+
